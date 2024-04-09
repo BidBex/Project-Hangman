@@ -1,0 +1,92 @@
+#include <iostream>
+using namespace std;
+
+void drawMan(int counter) {
+    if (counter == 1) {
+        cout << "  +---+\n";
+        cout << "      |\n";
+        cout << "      |\n";
+        cout << "      |\n";
+        cout << "=======\n";
+    } else if (counter == 2) {
+        cout << "  +---+\n";
+        cout << "  O   |\n";
+        cout << "      |\n";
+        cout << "      |\n";
+        cout << "=======\n";
+    } else if (counter == 3) {
+        cout << "  +---+\n";
+        cout << "  O   |\n";
+        cout << "  |   |\n";
+        cout << "      |\n";
+        cout << "=======\n";
+    } else if (counter == 4) {
+        cout << "  +---+\n";
+        cout << "  O   |\n";
+        cout << " /|   |\n";
+        cout << "      |\n";
+        cout << "=======\n";
+    } else if (counter == 5) {
+        cout << "  +---+\n";
+        cout << "  O   |\n";
+        cout << " /|\\  |\n";
+        cout << "      |\n";
+        cout << "=======\n";
+    } else if (counter == 6) {
+        cout << "  +---+\n";
+        cout << "  O   |\n";
+        cout << " /|\\  |\n";
+        cout << " /    |\n";
+        cout << "=======\n";
+    } else if (counter == 7) {
+        cout << "  +---+\n";
+        cout << "  O   |\n";
+        cout << " /|\\  |\n";
+        cout << " / \\  |\n";
+        cout << "=======\n";
+        cout << "You lose!\n";
+    }
+}
+
+int main() {
+    int counter = 0;
+    char guess;
+    string word = "hello";
+    string display(word.length(), '_');
+    bool won = false;
+    bool correctGuess;
+
+    cout << "Welcome to Hangman!" << endl;
+    cout << "Guess the word: " << display << endl;
+
+    while (counter < 7 && !won) {
+        cout << "Enter your guess: ";
+        cin >> guess;
+
+        correctGuess = false;
+        for (int i = 0; i < word.length(); i++) {
+            if (word[i] == guess) {
+                display[i] = guess;
+                correctGuess = true;
+            }
+        }
+
+        if (!correctGuess) {
+            counter++;
+        }
+
+        cout << "Guess the word: " << display << endl;
+
+        drawMan(counter);
+
+        if (display == word) {
+            won = true;
+        }
+    }
+
+    if (won) {
+        cout << "You win!" << endl;
+    }
+
+    return 0;
+}
