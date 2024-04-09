@@ -1,5 +1,20 @@
+
 #include <iostream>
 using namespace std;
+
+int difficulty;
+    cout << "Welcome to Hangman! Choose a difficulty level: 1 (easy), 2 (medium), 3 (hard): ";
+    cin >> difficulty;
+    string word = selectWord(difficulty);
+    int wordLength = word.length();
+    int lives;
+    if (difficulty == 1) {
+        lives = 7;
+    } else if (difficulty == 2) {
+        lives = 5;
+    } else if (difficulty == 3) {
+        lives = 3;
+    }
 
 void drawMan(int counter) {
     if (counter == 1) {
