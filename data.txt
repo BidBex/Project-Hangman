@@ -1,6 +1,11 @@
-5
-parcioaca
-milenium
-altaras
+10
+bolid
+revopsit
+chinezesc
 corn
-zilier
+cricov
+bomboane
+sauna
+gravat
+punctaj
+forma
