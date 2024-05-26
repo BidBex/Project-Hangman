@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1716759605 source:c:\users\altex\onedrive\documents\codes\hangman\main.cpp
+	<iostream>
+	"RandomWord.h"
+	"ParsareCuvant.h"
+	"Stickman.h"
+	<string>
+	<algorithm>
+
+1716757040 c:\users\altex\onedrive\documents\codes\hangman\randomword.h
+	<fstream>
+	<string>
+	<random>
+	<time.h>
+
+1716756051 c:\users\altex\onedrive\documents\codes\hangman\parsarecuvant.h
+	<string>
+
+1716759369 c:\users\altex\onedrive\documents\codes\hangman\stickman.h
+	<string>
+
