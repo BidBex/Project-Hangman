@@ -9,13 +9,7 @@ using namespace std;
 
 int main()
 {
-    /*
-        string cuvant = RandomWord();
-        cout << cuvant << endl;
-        string parsat = EliminaLitera(cuvant);
-        cout << parsat << endl;
-        cout << ReadaugaLitera(parsat, 'i', cuvant);
-    */
+    cout << "Bine ai venit, rau ai nimerit!" << endl;
     int dificultate;
     int vieti;
     cout << "Alege dificultatea intre 1 si 5" << endl;
@@ -24,7 +18,6 @@ int main()
     vieti = 6 - dificultate;
 
     string cuvant = RandomWord();
-
     string parsat = EliminaLitera(cuvant);
 
     cout << "Cuvantul tau este:" << endl;
